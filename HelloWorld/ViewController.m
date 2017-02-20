@@ -57,14 +57,10 @@
         iOSCodeVC *vc = [[iOSCodeVC alloc] init];
         vc.title = [self.btnTitles objectAtIndex:tag];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if(tag == 1){
-        
-    }else if(tag == 2){
-        
-    }else if(tag == 3){
-        
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

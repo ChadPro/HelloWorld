@@ -415,7 +415,7 @@
 				TargetAttributes = {
 					FC11264D1E5A7D5100927D14 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = XG6F2JN7GY;
+						DevelopmentTeam = QK4DZM8X3G;
 						ProvisioningStyle = Automatic;
 					};
 					FC1126661E5A7D5200927D14 = {
@@ -657,7 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XG6F2JN7GY;
+				DEVELOPMENT_TEAM = QK4DZM8X3G;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Connect.HelloWorld;
@@ -669,7 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XG6F2JN7GY;
+				DEVELOPMENT_TEAM = QK4DZM8X3G;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Connect.HelloWorld;
