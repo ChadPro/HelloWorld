@@ -10,16 +10,18 @@
 #import <AVFoundation/AVFoundation.h>
 #import "SDAutoLayout.h"
 
+#include "lame.h"
+
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 #define baseTag 170220
 
 @interface AVAudioRecorderVC ()
 
-@property(nonatomic,strong) NSString *recordFilePath;
-@property(nonatomic,strong) NSURL *recordUrl;
-@property(nonatomic,strong) AVAudioSession *session;
-@property(nonatomic,strong) AVAudioRecorder *recorder;
-@property(nonatomic,strong) AVAudioPlayer *player;
+@property(nonatomic,strong) NSString *recordFilePath;  //录音缓存地址
+@property(nonatomic,strong) NSURL *recordUrl;   //录音url
+@property(nonatomic,strong) AVAudioSession *session;    //音频控制器
+@property(nonatomic,strong) AVAudioRecorder *recorder;   //录音控制器
+@property(nonatomic,strong) AVAudioPlayer *player;    //播放控制器
 
 @end
 
@@ -35,7 +37,7 @@
 - (void)createUI{
     self.view.backgroundColor = UIColorFromHex(0x009966, 1.0);
     
-    NSArray *titles = @[@"录音",@"停止",@"播放"];
+    NSArray *titles = @[@"录音",@"停止",@"播放",@"转mp3",@"转换后播放"];
     
     for(NSInteger i=0;i<[titles count];i++){
         UIButton *btn = [[UIButton alloc]init];
@@ -64,7 +66,16 @@
     }else if(tag == 2){   //播放
         NSData *data =  [NSData dataWithContentsOfURL:self.recordUrl];
         self.player = [[AVAudioPlayer alloc] initWithData:data error:nil];
-        self.player.volume = 0.5;
+        self.player.volume = 0.8;
+        [self.player play];
+    }else if(tag == 3){  //转mp3
+        [self audioTomp3];
+    }else if(tag == 4){  //抓换后播放
+        NSString *path =[NSTemporaryDirectory() stringByAppendingPathComponent:@"record.mp3"];
+        NSURL *url = [NSURL fileURLWithPath:path];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        self.player = [[AVAudioPlayer alloc] initWithData:data error:nil];
+        self.player.volume = 0.8;
         [self.player play];
     }
 }
@@ -75,69 +86,36 @@
     
     if ([session respondsToSelector:@selector(requestRecordPermission:)]){
         [session performSelector:@selector(requestRecordPermission:) withObject:^(BOOL granted) {
-            if (granted) {
-                
-                // 用户同意获取麦克风，一定要在主线程中执行UI操作！！！
-                dispatch_queue_t queueOne = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-                dispatch_async(queueOne, ^{
-                    
+            if (granted)
+            {  //用户同意获取麦克风
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        //在主线程中执行UI，这里主要是执行录音和计时的UI操作
+                        //在主线程中是执行录音操作
                         [self record];
                     });
-                });
-            } else {
-                
-                // 用户不同意获取麦克风
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"麦克风不可用" message:@"请在“设置 - 隐私 - 麦克风”中允许XXX访问你的麦克风" preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *openAction = [UIAlertAction actionWithTitle:@"前往开启" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    
-                    //如果要让用户直接跳转到设置界面，则可以进行下面的操作，如不需要，就忽略下面的代码
-                    /*
-                     *iOS10 开始苹果禁止应用直接跳转到系统单个设置页面，只能跳转到应用所有设置页面
-                     *iOS10以下可以添加单个设置的系统路径，并在info里添加URL Type，将URL schemes 设置路径为prefs即可。
-                     *@"prefs:root=Sounds"
-                     */
-                    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                    
-                    if([[UIApplication sharedApplication] canOpenURL:url]) {
-                        
-                        [[UIApplication sharedApplication] openURL:url];
-                    }
-                }];
-                
-                [alertController addAction:openAction];
-                [self presentViewController:alertController animated:YES completion:nil];
-            }
+            }else{}
         }];
     }
 }
 
+//录制
 -(void)record{
     _session = [AVAudioSession sharedInstance];
     NSError *sessionError;
     [_session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
     //判断后台有没有播放
     if (_session == nil) {
-        
         NSLog(@"Error creating sessing:%@", [sessionError description]);
     } else {
         //关闭其他音频播放，把自己设为活跃状态
         [_session setActive:YES error:nil];
     }
-    
 
-    
     //设置AVAudioRecorder
     if (!self.recorder) {
         
         NSDictionary *settings = @{AVFormatIDKey  :  @(kAudioFormatLinearPCM), AVSampleRateKey : @(11025.0), AVNumberOfChannelsKey :@2, AVEncoderBitDepthHintKey : @16, AVEncoderAudioQualityKey : @(AVAudioQualityHigh)};
         
-        //开始录音,将所获取到得录音存到文件里 _recordUrl 是存放录音的文件路径，在下面附上
-        
         self.recorder = [[AVAudioRecorder alloc] initWithURL:_recordUrl settings:settings error:nil];
-        
         /*
          * settings 参数
          1.AVNumberOfChannelsKey 通道数 通常为双声道 值2
@@ -156,11 +134,56 @@
     
     //准备记录录音
     [_recorder prepareToRecord];
-    
-    //开启仪表计数功能,必须开启这个功能，才能检测音频值
+    //开启仪表计数功能,开启这个功能，才能检测音频值
     [_recorder setMeteringEnabled:YES];
     //启动或者恢复记录的录音文件
     [_recorder record];
+}
+
+//转换 -> mp3
+- (void)audioTomp3{
+    
+    NSString *mp3FilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"record.mp3"];
+    
+    @try {
+        int read, write;
+        
+        FILE *pcm = fopen([self.recordFilePath cStringUsingEncoding:1], "rb");  //source 被转换的音频文件位置
+        fseek(pcm, 4*1024, SEEK_CUR);                                   //skip file header
+        FILE *mp3 = fopen([mp3FilePath cStringUsingEncoding:1], "wb");  //output 输出生成的Mp3文件位置
+        
+        const int PCM_SIZE = 8192;
+        const int MP3_SIZE = 8192;
+        short int pcm_buffer[PCM_SIZE*2];
+        unsigned char mp3_buffer[MP3_SIZE];
+        
+        lame_t lame = lame_init();
+        lame_set_in_samplerate(lame, 11025.0);
+        lame_set_VBR(lame, vbr_default);
+        lame_init_params(lame);
+        
+        do {
+            read = fread(pcm_buffer, 2*sizeof(short int), PCM_SIZE, pcm);
+            if (read == 0)
+                write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
+            else
+                write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
+            
+            fwrite(mp3_buffer, write, 1, mp3);
+            
+        } while (read != 0);
+        
+        lame_close(lame);
+        fclose(mp3);
+        fclose(pcm);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@",[exception description]);
+    }
+    @finally {
+        NSLog(@"MP3生成成功!");
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
