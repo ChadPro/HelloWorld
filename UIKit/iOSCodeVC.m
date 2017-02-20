@@ -7,8 +7,18 @@
 //
 
 #import "iOSCodeVC.h"
+#import "iOSCodeVCDataSource.h"
+#import "SDAutoLayout.h"
 
-@interface iOSCodeVC ()
+#import "MP3_playVC.h"
+
+#define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
+
+@interface iOSCodeVC ()<UITableViewDelegate>
+
+@property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) iOSCodeVCDataSource *dataSource;
+@property(nonatomic,strong) NSArray *titleArray;
 
 @end
 
@@ -16,7 +26,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _titleArray = @[@"播放音频"];
+    [self createUI];
+}
+
+-(void) createUI{
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    self.tableView = [[UITableView alloc]init];
+    self.tableView.delegate = self;
+    _dataSource = [[iOSCodeVCDataSource alloc]init];
+    _dataSource.titleArray = _titleArray;
+    _dataSource.cellIdentifier = @"tableViewCell";
+    self.tableView.dataSource = _dataSource;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
+    [self.view addSubview:_tableView];
+    _tableView.sd_layout
+    .topSpaceToView(self.view,0)
+    .leftSpaceToView(self.view,0)
+    .rightSpaceToView(self.view,0)
+    .bottomSpaceToView(self.view,0);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    if(row == 0){
+        MP3_playVC *vc = [[MP3_playVC alloc]init];
+        vc.title = [_titleArray objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

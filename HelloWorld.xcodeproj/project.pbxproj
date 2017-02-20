@@ -34,6 +34,7 @@
 		FC1126C21E5A824A00927D14 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126B31E5A824A00927D14 /* UIWebView+AFNetworking.m */; };
 		FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C61E5A88E200927D14 /* MP3_playVC.m */; };
 		FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C91E5A890100927D14 /* iOSCodeVC.m */; };
+		FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		FC1126C61E5A88E200927D14 /* MP3_playVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP3_playVC.m; sourceTree = "<group>"; };
 		FC1126C81E5A890100927D14 /* iOSCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSCodeVC.h; sourceTree = "<group>"; };
 		FC1126C91E5A890100927D14 /* iOSCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVC.m; sourceTree = "<group>"; };
+		FC1126CB1E5A8DBF00927D14 /* iOSCodeVCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSCodeVCDataSource.h; sourceTree = "<group>"; };
+		FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVCDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 			children = (
 				FC1126C81E5A890100927D14 /* iOSCodeVC.h */,
 				FC1126C91E5A890100927D14 /* iOSCodeVC.m */,
+				FC1126CB1E5A8DBF00927D14 /* iOSCodeVCDataSource.h */,
+				FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */,
 				FC1126C41E5A888500927D14 /* 录音播音 */,
 			);
 			path = UIKit;
@@ -481,6 +486,7 @@
 				FC1126531E5A7D5200927D14 /* main.m in Sources */,
 				FC1126BC1E5A824A00927D14 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
+				FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

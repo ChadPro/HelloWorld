@@ -22,8 +22,11 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.btnTitles = @[@"UIKit",@"网络",@"图像处理",@"RunLoop"];
     [self createUI];
 }
@@ -62,7 +65,6 @@
         
     }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
