@@ -37,6 +37,7 @@
 		FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */; };
 		FC1126CF1E5A961C00927D14 /* qingtian.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC1126CE1E5A961C00927D14 /* qingtian.mp3 */; };
 		FC1126D21E5A969300927D14 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126D11E5A969300927D14 /* AVFoundation.framework */; };
+		FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126D41E5A9F3500927D14 /* AVAudioRecorderVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVCDataSource.m; sourceTree = "<group>"; };
 		FC1126CE1E5A961C00927D14 /* qingtian.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qingtian.mp3; sourceTree = "<group>"; };
 		FC1126D11E5A969300927D14 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FC1126D31E5A9F3500927D14 /* AVAudioRecorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioRecorderVC.h; sourceTree = "<group>"; };
+		FC1126D41E5A9F3500927D14 /* AVAudioRecorderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioRecorderVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +334,8 @@
 			children = (
 				FC1126C51E5A88E200927D14 /* MP3_playVC.h */,
 				FC1126C61E5A88E200927D14 /* MP3_playVC.m */,
+				FC1126D31E5A9F3500927D14 /* AVAudioRecorderVC.h */,
+				FC1126D41E5A9F3500927D14 /* AVAudioRecorderVC.m */,
 			);
 			path = "录音播音";
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				FC1126531E5A7D5200927D14 /* main.m in Sources */,
 				FC1126BC1E5A824A00927D14 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
+				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
 				FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

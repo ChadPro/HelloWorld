@@ -11,6 +11,7 @@
 #import "SDAutoLayout.h"
 
 #import "MP3_playVC.h"
+#import "AVAudioRecorderVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 
@@ -26,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titleArray = @[@"播放音频"];
+    _titleArray = @[@"播放音频",@"录制音频"];
     [self createUI];
 }
 
@@ -52,6 +53,10 @@
     NSInteger row = indexPath.row;
     if(row == 0){
         MP3_playVC *vc = [[MP3_playVC alloc]init];
+        vc.title = [_titleArray objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 1){
+        AVAudioRecorderVC *vc = [[AVAudioRecorderVC alloc]init];
         vc.title = [_titleArray objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }
