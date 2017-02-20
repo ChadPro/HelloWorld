@@ -35,6 +35,8 @@
 		FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C61E5A88E200927D14 /* MP3_playVC.m */; };
 		FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C91E5A890100927D14 /* iOSCodeVC.m */; };
 		FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */; };
+		FC1126CF1E5A961C00927D14 /* qingtian.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC1126CE1E5A961C00927D14 /* qingtian.mp3 */; };
+		FC1126D21E5A969300927D14 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126D11E5A969300927D14 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		FC1126C91E5A890100927D14 /* iOSCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVC.m; sourceTree = "<group>"; };
 		FC1126CB1E5A8DBF00927D14 /* iOSCodeVCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSCodeVCDataSource.h; sourceTree = "<group>"; };
 		FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVCDataSource.m; sourceTree = "<group>"; };
+		FC1126CE1E5A961C00927D14 /* qingtian.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qingtian.mp3; sourceTree = "<group>"; };
+		FC1126D11E5A969300927D14 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1126D21E5A969300927D14 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +160,7 @@
 				FC11266A1E5A7D5200927D14 /* HelloWorldTests */,
 				FC1126751E5A7D5200927D14 /* HelloWorldUITests */,
 				FC11264F1E5A7D5200927D14 /* Products */,
+				FC1126D01E5A969300927D14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,6 +321,7 @@
 		FC1126C31E5A826D00927D14 /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
+				FC1126CE1E5A961C00927D14 /* qingtian.mp3 */,
 			);
 			path = "资源";
 			sourceTree = "<group>";
@@ -326,6 +333,14 @@
 				FC1126C61E5A88E200927D14 /* MP3_playVC.m */,
 			);
 			path = "录音播音";
+			sourceTree = "<group>";
+		};
+		FC1126D01E5A969300927D14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC1126D11E5A969300927D14 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1126611E5A7D5200927D14 /* LaunchScreen.storyboard in Resources */,
+				FC1126CF1E5A961C00927D14 /* qingtian.mp3 in Resources */,
 				FC11265E1E5A7D5200927D14 /* Assets.xcassets in Resources */,
 				FC11265C1E5A7D5200927D14 /* Main.storyboard in Resources */,
 			);
