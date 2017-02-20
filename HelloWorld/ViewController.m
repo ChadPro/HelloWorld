@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "SDAutoLayout.h"
+
+#import "iOSCodeVC.h"
+
+#define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
+#define tagBase 170220
 
 @interface ViewController ()
+
+@property(nonatomic,strong) NSArray *btnTitles;
 
 @end
 
@@ -16,13 +24,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.btnTitles = @[@"UIKit",@"网络",@"图像处理",@"RunLoop"];
+    [self createUI];
+}
+
+- (void)createUI{
+    self.view.backgroundColor = UIColorFromHex(0x009966, 1.0);
+    
+    for (NSInteger i = 0; i<_btnTitles.count; i++) {
+        UIButton *btn = [[UIButton alloc]init];
+        btn.tag = tagBase + i;
+        btn.layer.cornerRadius = 8.0;
+        [btn setBackgroundColor:UIColorFromHex(0xFF8C00, 1.0)];
+        [btn setTitle:[_btnTitles objectAtIndex:i] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(jumpAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn];
+        btn.sd_layout
+        .centerXEqualToView(self.view)
+        .widthIs(100)
+        .heightIs(45)
+        .topSpaceToView(self.view, 150 + i*(15+45));
+    }
+}
+
+- (void)jumpAction:(UIButton *)btn{
+    NSInteger tag = btn.tag - tagBase;
+    if(tag == 0){
+        iOSCodeVC *vc = [[iOSCodeVC alloc] init];
+        vc.title = [self.btnTitles objectAtIndex:tag];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(tag == 1){
+        
+    }else if(tag == 2){
+        
+    }else if(tag == 3){
+        
+    }
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

@@ -32,6 +32,8 @@
 		FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126AF1E5A824A00927D14 /* UIProgressView+AFNetworking.m */; };
 		FC1126C11E5A824A00927D14 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126B11E5A824A00927D14 /* UIRefreshControl+AFNetworking.m */; };
 		FC1126C21E5A824A00927D14 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126B31E5A824A00927D14 /* UIWebView+AFNetworking.m */; };
+		FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C61E5A88E200927D14 /* MP3_playVC.m */; };
+		FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126C91E5A890100927D14 /* iOSCodeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,10 @@
 		FC1126B11E5A824A00927D14 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		FC1126B21E5A824A00927D14 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		FC1126B31E5A824A00927D14 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		FC1126C51E5A88E200927D14 /* MP3_playVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3_playVC.h; sourceTree = "<group>"; };
+		FC1126C61E5A88E200927D14 /* MP3_playVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP3_playVC.m; sourceTree = "<group>"; };
+		FC1126C81E5A890100927D14 /* iOSCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSCodeVC.h; sourceTree = "<group>"; };
+		FC1126C91E5A890100927D14 /* iOSCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSCodeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +241,9 @@
 		FC1126881E5A81C400927D14 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FC1126C81E5A890100927D14 /* iOSCodeVC.h */,
+				FC1126C91E5A890100927D14 /* iOSCodeVC.m */,
+				FC1126C41E5A888500927D14 /* 录音播音 */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -303,6 +312,15 @@
 			children = (
 			);
 			path = "资源";
+			sourceTree = "<group>";
+		};
+		FC1126C41E5A888500927D14 /* 录音播音 */ = {
+			isa = PBXGroup;
+			children = (
+				FC1126C51E5A88E200927D14 /* MP3_playVC.h */,
+				FC1126C61E5A88E200927D14 /* MP3_playVC.m */,
+			);
+			path = "录音播音";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,9 +464,11 @@
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
 				FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */,
+				FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */,
 				FC1126BB1E5A824A00927D14 /* AFImageDownloader.m in Sources */,
 				FC1126BA1E5A824A00927D14 /* AFAutoPurgingImageCache.m in Sources */,
 				FC11268F1E5A81F400927D14 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */,
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
 				FC1126BD1E5A824A00927D14 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FC1126B91E5A824A00927D14 /* AFURLSessionManager.m in Sources */,
