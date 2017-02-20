@@ -40,6 +40,8 @@
 		FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126D41E5A9F3500927D14 /* AVAudioRecorderVC.m */; };
 		FC1126E21E5AE67000927D14 /* lame.h in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126E01E5AE67000927D14 /* lame.h */; };
 		FC1126E31E5AE67000927D14 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126E11E5AE67000927D14 /* libmp3lame.a */; };
+		FC1126E61E5AF10600927D14 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E51E5AF10600927D14 /* WebVC.m */; };
+		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,10 @@
 		FC1126D41E5A9F3500927D14 /* AVAudioRecorderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioRecorderVC.m; sourceTree = "<group>"; };
 		FC1126E01E5AE67000927D14 /* lame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		FC1126E11E5AE67000927D14 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		FC1126E41E5AF10600927D14 /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
+		FC1126E51E5AF10600927D14 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
+		FC1126E71E5AF13600927D14 /* WebVCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVCDataSource.h; sourceTree = "<group>"; };
+		FC1126E81E5AF13600927D14 /* WebVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVCDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,14 @@
 		FC1126861E5A81C400927D14 /* 网络 */ = {
 			isa = PBXGroup;
 			children = (
+				FC1126E41E5AF10600927D14 /* WebVC.h */,
+				FC1126E51E5AF10600927D14 /* WebVC.m */,
+				FC1126E71E5AF13600927D14 /* WebVCDataSource.h */,
+				FC1126E81E5AF13600927D14 /* WebVCDataSource.m */,
+				FC1126ED1E5AF4E200927D14 /* json */,
+				FC1126EA1E5AF4E200927D14 /* 图片 */,
+				FC1126EC1E5AF4E200927D14 /* 音频 */,
+				FC1126EB1E5AF4E200927D14 /* 视频 */,
 			);
 			path = "网络";
 			sourceTree = "<group>";
@@ -354,6 +368,34 @@
 				FC1126D11E5A969300927D14 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC1126EA1E5AF4E200927D14 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		FC1126EB1E5AF4E200927D14 /* 视频 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视频";
+			sourceTree = "<group>";
+		};
+		FC1126EC1E5AF4E200927D14 /* 音频 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "音频";
+			sourceTree = "<group>";
+		};
+		FC1126ED1E5AF4E200927D14 /* json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */,
 				FC1126B71E5A824A00927D14 /* AFURLRequestSerialization.m in Sources */,
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
@@ -508,6 +551,7 @@
 				FC1126B91E5A824A00927D14 /* AFURLSessionManager.m in Sources */,
 				FC1126C11E5A824A00927D14 /* UIRefreshControl+AFNetworking.m in Sources */,
 				FC1126C21E5A824A00927D14 /* UIWebView+AFNetworking.m in Sources */,
+				FC1126E61E5AF10600927D14 /* WebVC.m in Sources */,
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
 				FC1126B51E5A824A00927D14 /* AFNetworkReachabilityManager.m in Sources */,
 				FC1126B61E5A824A00927D14 /* AFSecurityPolicy.m in Sources */,
