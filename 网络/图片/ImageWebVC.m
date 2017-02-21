@@ -6,13 +6,13 @@
 //  Copyright © 2017年 Ji Ling. All rights reserved.
 //
 
-#import "ImageWebVc.h"
+#import "ImageWebVC.h"
 
-@interface ImageWebVc ()
+@interface ImageWebVC ()
 
 @end
 
-@implementation ImageWebVc
+@implementation ImageWebVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

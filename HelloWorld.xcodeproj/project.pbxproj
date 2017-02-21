@@ -43,7 +43,7 @@
 		FC1126E61E5AF10600927D14 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E51E5AF10600927D14 /* WebVC.m */; };
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
 		FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B01E5BD73D003D4EE9 /* JSONVC.m */; };
-		FC6086B41E5BD7E3003D4EE9 /* ImageWebVc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVc.m */; };
+		FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */; };
 		FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */; };
 		FC6086BA1E5BD861003D4EE9 /* VideoWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B91E5BD861003D4EE9 /* VideoWebVC.m */; };
 /* End PBXBuildFile section */
@@ -138,8 +138,8 @@
 		FC1126E81E5AF13600927D14 /* WebVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVCDataSource.m; sourceTree = "<group>"; };
 		FC6086AF1E5BD73D003D4EE9 /* JSONVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONVC.h; sourceTree = "<group>"; };
 		FC6086B01E5BD73D003D4EE9 /* JSONVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONVC.m; sourceTree = "<group>"; };
-		FC6086B21E5BD7E3003D4EE9 /* ImageWebVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWebVc.h; sourceTree = "<group>"; };
-		FC6086B31E5BD7E3003D4EE9 /* ImageWebVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWebVc.m; sourceTree = "<group>"; };
+		FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWebVC.h; sourceTree = "<group>"; };
+		FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWebVC.m; sourceTree = "<group>"; };
 		FC6086B51E5BD845003D4EE9 /* AudioWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioWebVC.h; sourceTree = "<group>"; };
 		FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioWebVC.m; sourceTree = "<group>"; };
 		FC6086B81E5BD861003D4EE9 /* VideoWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWebVC.h; sourceTree = "<group>"; };
@@ -385,8 +385,8 @@
 		FC1126EA1E5AF4E200927D14 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
-				FC6086B21E5BD7E3003D4EE9 /* ImageWebVc.h */,
-				FC6086B31E5BD7E3003D4EE9 /* ImageWebVc.m */,
+				FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */,
+				FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */,
 			);
 			path = "图片";
 			sourceTree = "<group>";
@@ -556,7 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */,
-				FC6086B41E5BD7E3003D4EE9 /* ImageWebVc.m in Sources */,
+				FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */,
 				FC1126B71E5A824A00927D14 /* AFURLRequestSerialization.m in Sources */,
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,

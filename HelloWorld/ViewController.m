@@ -10,6 +10,7 @@
 #import "SDAutoLayout.h"
 
 #import "iOSCodeVC.h"
+#import "WebVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 #define tagBase 170220
@@ -55,6 +56,10 @@
     NSInteger tag = btn.tag - tagBase;
     if(tag == 0){
         iOSCodeVC *vc = [[iOSCodeVC alloc] init];
+        vc.title = [self.btnTitles objectAtIndex:tag];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(tag == 1){
+        WebVC *vc = [[WebVC alloc] init];
         vc.title = [self.btnTitles objectAtIndex:tag];
         [self.navigationController pushViewController:vc animated:YES];
     }

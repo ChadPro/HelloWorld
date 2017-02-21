@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageWebVc : UIViewController
+@interface ImageWebVC : UIViewController
 
 @end
