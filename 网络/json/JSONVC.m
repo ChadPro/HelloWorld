@@ -71,7 +71,8 @@
 #pragma mark- --网络获取函数--
 //选择用哪一种网络获取方式
 - (void)getData:(UIButton *)btn{
-    [self getJsWithNSUrlSession:btn];
+//    [self getJsWithNSUrlSession:btn];   //用iOS自带网络session
+    [self getJsWithAFNetworking:btn];   //用AFNetworking获取数据
 }
 
 //使用iOS自带网络session
@@ -113,6 +114,38 @@
 
 //使用AFNetworking
 - (void)getJsWithAFNetworking:(UIButton *)btn{
+    
+    //1.创建 HTTP manager ，并设置请求/获取数据格式
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/json"];
+    
+    //2.设置 url 及请求参数 parameters
+    NSString *url =@"http://192.168.1.77:33333/main/js/user";
+    NSMutableDictionary *mutableDic = [[NSMutableDictionary alloc] init];
+    if((_parametersTextView.text!=nil)&&(_parametersTextView.text.length>0)){
+        [mutableDic setObject:_parametersTextView.text forKey:@"userID"];
+    }else{
+        NSLog(@"输入的userID错误");
+        return;
+    }
+    NSDictionary *parameters = [mutableDic copy];
+    
+    //3.开始网络请求
+    [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //使用网络数据
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSData *data = [self dicToData:responseObject];
+            NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            _logView.text = string;
+        });
+     
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"wrong");
+    }];
     
 }
 
