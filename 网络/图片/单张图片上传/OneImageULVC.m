@@ -140,8 +140,8 @@
 
 //发送文件action
 -(void)sendFile{
-//    [self sendByNSURLSession];  //用iOS-NSURLSession
-    [self sendByAfnetworking];  //用AFNetworking
+    [self sendByNSURLSession];  //用iOS-NSURLSession
+//    [self sendByAfnetworking];  //用AFNetworking
 }
 
 #pragma mark- ---发送图片---
@@ -149,40 +149,61 @@
 - (void)sendByNSURLSession{
     
     NSURL *url = [NSURL URLWithString:@"http://192.168.1.77:33333/main/imageFile/upload/logo.png"];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-
-    NSString *boundary = @"boundary=---------------827292";
-    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data;boundary=%@",boundary];
-    [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPMethod:@"POST"];
-    //******
-    NSMutableString *bodyHead = [[NSMutableString alloc]init];
-    NSMutableData *multableData = [[NSMutableData alloc]init];
-    
-    NSString *name = @"one";
-    NSString *fileName = @"one.png";
-    
-    NSData *imageData =UIImagePNGRepresentation(self.imageView.image);
-    //*****
-    NSString *beginBoundary = @"--827292";
-    NSString *endBoundary = @"827292--";
-    [bodyHead appendString:beginBoundary];
-    [bodyHead appendFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",name,fileName];
-    [bodyHead appendFormat:@"Content-Type: application/png\r\n\r\n"];
-    
-    [multableData appendData:[bodyHead dataUsingEncoding:NSUTF8StringEncoding]];
-    [multableData appendData:imageData];
-    [multableData appendData:[endBoundary dataUsingEncoding:NSUTF8StringEncoding]];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//
+//    NSString *boundary = @"boundary=---------------827292";
+//    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data;boundary=%@",boundary];
+//    [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
+//    [request setHTTPMethod:@"POST"];
+//    //******
+//    NSMutableString *bodyHead = [[NSMutableString alloc]init];
+//    NSMutableData *multableData = [[NSMutableData alloc]init];
+//    
+//    NSString *name = @"one";
+//    NSString *fileName = @"one.png";
+//    
+//    NSData *imageData =UIImagePNGRepresentation(self.imageView.image);
+//    //*****
+//    NSString *beginBoundary = @"--827292";
+//    NSString *endBoundary = @"827292--";
+//    [bodyHead appendString:beginBoundary];
+//    [bodyHead appendFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",name,fileName];
+//    [bodyHead appendFormat:@"Content-Type: application/png\r\n\r\n"];
+//    
+//    [multableData appendData:[bodyHead dataUsingEncoding:NSUTF8StringEncoding]];
+//    [multableData appendData:imageData];
+//    [multableData appendData:[endBoundary dataUsingEncoding:NSUTF8StringEncoding]];
+//    
+//    NSURLSession *session = [NSURLSession sharedSession];
+//    
+//    NSData *data = [multableData copy];
+//    
+//    NSURLSessionDataTask *dataTask = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        
+//    }];
+//    
+//    [dataTask resume];
     
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSData *data = [multableData copy];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
     
-    NSURLSessionDataTask *dataTask = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
+    NSString *name = @"long.png";
+    
+    NSMutableData *data = [[NSMutableData alloc] init];
+    
+    NSData *nameData =[name dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSData * imagedata = UIImagePNGRepresentation(self.imageView.image);
+
+    [data appendData:nameData];
+    [data appendData:imagedata];
+    
+    NSURLSessionUploadTask * uploadtask = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     }];
     
-    [dataTask resume];
+    [uploadtask resume];
 }
 //用AFNetworking
 - (void)sendByAfnetworking{
