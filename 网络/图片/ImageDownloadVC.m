@@ -59,7 +59,9 @@
 //获取网路数据
 - (void)downloadImage:(UIButton *)btn{
     [self getImageWithNSURLSession1:btn];  //用NSURLSessionDataTask
-    [self getImageWithNSURLSession2:btn];  //用NSURLSessionDownloadTask
+//    [self getImageWithNSURLSession2:btn];  //用NSURLSessionDownloadTask
+//    [self getImageWithAFNetworking1:btn];   //用AFNetworkging
+//    [self getImageWithAFNetworking2:btn];   //用AFNetworkging
 }
 
 //用iOS-NSURLSession获取图片数据--DataTask
@@ -80,15 +82,16 @@
             self.imageView.image = image;
         });
     }];
-    
+
     //4.开始任务
     [dataTask resume];
 }
 
 //用iOS-NSURLSession获取图片数据--DownloadTask
 - (void)getImageWithNSURLSession2:(UIButton *)btn{
-    //1.获的session，如果用代理的话，要用另外获得session的方式
-    NSURLSession *session = [NSURLSession sharedSession];
+    //1.获得session
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
+    
     
     //2.请求request
     NSURL *url = [NSURL URLWithString:@"http://192.168.1.77:33333/main/imageFile/download/logo.png"];
@@ -96,27 +99,51 @@
     request.HTTPMethod = @"POST";
     
     //3.创建任务Task
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //解析数据
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIImage *image = [[UIImage alloc]initWithData:data];
-            self.imageView.image = image;
-        });
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           NSData *data = [NSData dataWithContentsOfURL:location];
+           UIImage *image = [UIImage imageWithData:data];
+           _imageView.image = image;
+       });
     }];
     
     //4.开始任务
-    [dataTask resume];
+    [downloadTask resume];
 }
 
 //用AFNetworking获取图片数据
-- (void)getImageWithAFNetworking:(UIButton *)btn{
+- (void)getImageWithAFNetworking1:(UIButton *)btn{
+    //1.创建 HTTP manager ，并设置请求/获取数据格式
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
+    //2.设置 url
+    NSString *url =@"http://192.168.1.77:33333/main/imageFile/download/logo.png";
+    
+    //3.开始网络请求
+    [manager POST:url parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //使用网络数据
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [UIImage imageWithData:responseObject];
+            self.imageView.image = image;
+        });
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error = %@",error);
+    }];
+}
+
+//用AFNetworking获取图片数据
+- (void)getImageWithAFNetworking2:(UIButton *)btn{
+    NSURL *url = [NSURL URLWithString:@"http://192.168.1.77:33333/main/imageFile/download/logo.png"];
+    [self.imageView setImageWithURL:url];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-   
 }
 
 @end
