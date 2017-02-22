@@ -46,6 +46,9 @@
 		FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */; };
 		FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */; };
 		FC6086BA1E5BD861003D4EE9 /* VideoWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B91E5BD861003D4EE9 /* VideoWebVC.m */; };
+		FC60EAF61E5D2B380062D12F /* ImageDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EAF51E5D2B380062D12F /* ImageDownloadVC.m */; };
+		FC60EAF91E5D2B560062D12F /* ImageUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EAF81E5D2B560062D12F /* ImageUploadVC.m */; };
+		FC60EAFC1E5D2B7A0062D12F /* ImageCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EAFB1E5D2B7A0062D12F /* ImageCacheVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,12 @@
 		FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioWebVC.m; sourceTree = "<group>"; };
 		FC6086B81E5BD861003D4EE9 /* VideoWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWebVC.h; sourceTree = "<group>"; };
 		FC6086B91E5BD861003D4EE9 /* VideoWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWebVC.m; sourceTree = "<group>"; };
+		FC60EAF41E5D2B380062D12F /* ImageDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloadVC.h; sourceTree = "<group>"; };
+		FC60EAF51E5D2B380062D12F /* ImageDownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloadVC.m; sourceTree = "<group>"; };
+		FC60EAF71E5D2B560062D12F /* ImageUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUploadVC.h; sourceTree = "<group>"; };
+		FC60EAF81E5D2B560062D12F /* ImageUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUploadVC.m; sourceTree = "<group>"; };
+		FC60EAFA1E5D2B7A0062D12F /* ImageCacheVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCacheVC.h; sourceTree = "<group>"; };
+		FC60EAFB1E5D2B7A0062D12F /* ImageCacheVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +396,12 @@
 			children = (
 				FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */,
 				FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */,
+				FC60EAF41E5D2B380062D12F /* ImageDownloadVC.h */,
+				FC60EAF51E5D2B380062D12F /* ImageDownloadVC.m */,
+				FC60EAF71E5D2B560062D12F /* ImageUploadVC.h */,
+				FC60EAF81E5D2B560062D12F /* ImageUploadVC.m */,
+				FC60EAFA1E5D2B7A0062D12F /* ImageCacheVC.h */,
+				FC60EAFB1E5D2B7A0062D12F /* ImageCacheVC.m */,
 			);
 			path = "图片";
 			sourceTree = "<group>";
@@ -557,7 +572,9 @@
 			files = (
 				FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */,
 				FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */,
+				FC60EAFC1E5D2B7A0062D12F /* ImageCacheVC.m in Sources */,
 				FC1126B71E5A824A00927D14 /* AFURLRequestSerialization.m in Sources */,
+				FC60EAF61E5D2B380062D12F /* ImageDownloadVC.m in Sources */,
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
@@ -565,6 +582,7 @@
 				FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */,
 				FC1126BB1E5A824A00927D14 /* AFImageDownloader.m in Sources */,
 				FC1126BA1E5A824A00927D14 /* AFAutoPurgingImageCache.m in Sources */,
+				FC60EAF91E5D2B560062D12F /* ImageUploadVC.m in Sources */,
 				FC11268F1E5A81F400927D14 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */,
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
