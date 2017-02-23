@@ -11,6 +11,7 @@
 
 #import "iOSCodeVC.h"
 #import "WebVC.h"
+#import "HWDataVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 #define tagBase 170220
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.btnTitles = @[@"UIKit",@"网络",@"图像处理",@"RunLoop"];
+    self.btnTitles = @[@"UIKit",@"网络",@"数据存储",@"图像处理",@"RunLoop"];
     [self createUI];
 }
 
@@ -60,6 +61,11 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(tag == 1){
         WebVC *vc = [[WebVC alloc] init];
+        vc.title = [self.btnTitles objectAtIndex:tag];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(tag == 2){
+        HWDataVC *vc = [[HWDataVC alloc] init];
         vc.title = [self.btnTitles objectAtIndex:tag];
         [self.navigationController pushViewController:vc animated:YES];
     }

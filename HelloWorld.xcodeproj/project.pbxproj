@@ -44,6 +44,8 @@
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
 		FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133A1E5E91D60061664A /* AudioUploadVC.m */; };
 		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
+		FC5413461E5ED3240061664A /* HWDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5413451E5ED3240061664A /* HWDataVC.m */; };
+		FC54134E1E5EE0B90061664A /* HWCreatePlistDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54134D1E5EE0B90061664A /* HWCreatePlistDataVC.m */; };
 		FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B01E5BD73D003D4EE9 /* JSONVC.m */; };
 		FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */; };
 		FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */; };
@@ -147,6 +149,10 @@
 		FC54133A1E5E91D60061664A /* AudioUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploadVC.m; sourceTree = "<group>"; };
 		FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDownloadVC.h; sourceTree = "<group>"; };
 		FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDownloadVC.m; sourceTree = "<group>"; };
+		FC5413441E5ED3240061664A /* HWDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWDataVC.h; sourceTree = "<group>"; };
+		FC5413451E5ED3240061664A /* HWDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWDataVC.m; sourceTree = "<group>"; };
+		FC54134C1E5EE0B90061664A /* HWCreatePlistDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCreatePlistDataVC.h; sourceTree = "<group>"; };
+		FC54134D1E5EE0B90061664A /* HWCreatePlistDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCreatePlistDataVC.m; sourceTree = "<group>"; };
 		FC6086AF1E5BD73D003D4EE9 /* JSONVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONVC.h; sourceTree = "<group>"; };
 		FC6086B01E5BD73D003D4EE9 /* JSONVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONVC.m; sourceTree = "<group>"; };
 		FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWebVC.h; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		FC1126451E5A7D5100927D14 = {
 			isa = PBXGroup;
 			children = (
+				FC5413401E5ECED40061664A /* 数据存储 */,
 				FC1126881E5A81C400927D14 /* UIKit */,
 				FC1126861E5A81C400927D14 /* 网络 */,
 				FC1126851E5A81C400927D14 /* 图像处理 */,
@@ -467,6 +474,25 @@
 			path = "下载音频";
 			sourceTree = "<group>";
 		};
+		FC5413401E5ECED40061664A /* 数据存储 */ = {
+			isa = PBXGroup;
+			children = (
+				FC5413441E5ED3240061664A /* HWDataVC.h */,
+				FC5413451E5ED3240061664A /* HWDataVC.m */,
+				FC54134B1E5EE0B90061664A /* plist */,
+			);
+			path = "数据存储";
+			sourceTree = "<group>";
+		};
+		FC54134B1E5EE0B90061664A /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				FC54134C1E5EE0B90061664A /* HWCreatePlistDataVC.h */,
+				FC54134D1E5EE0B90061664A /* HWCreatePlistDataVC.m */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
 		FC60EB3C1E5D6AD40062D12F /* 单张图片上传 */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,8 +669,10 @@
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
 				FC6086BA1E5BD861003D4EE9 /* VideoWebVC.m in Sources */,
 				FC1126BD1E5A824A00927D14 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				FC54134E1E5EE0B90061664A /* HWCreatePlistDataVC.m in Sources */,
 				FC1126B91E5A824A00927D14 /* AFURLSessionManager.m in Sources */,
 				FC1126C11E5A824A00927D14 /* UIRefreshControl+AFNetworking.m in Sources */,
+				FC5413461E5ED3240061664A /* HWDataVC.m in Sources */,
 				FC1126C21E5A824A00927D14 /* UIWebView+AFNetworking.m in Sources */,
 				FC1126E61E5AF10600927D14 /* WebVC.m in Sources */,
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
