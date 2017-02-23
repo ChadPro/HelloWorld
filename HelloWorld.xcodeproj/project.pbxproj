@@ -42,6 +42,8 @@
 		FC1126E31E5AE67000927D14 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126E11E5AE67000927D14 /* libmp3lame.a */; };
 		FC1126E61E5AF10600927D14 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E51E5AF10600927D14 /* WebVC.m */; };
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
+		FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133A1E5E91D60061664A /* AudioUploadVC.m */; };
+		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
 		FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B01E5BD73D003D4EE9 /* JSONVC.m */; };
 		FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */; };
 		FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */; };
@@ -141,6 +143,10 @@
 		FC1126E51E5AF10600927D14 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 		FC1126E71E5AF13600927D14 /* WebVCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVCDataSource.h; sourceTree = "<group>"; };
 		FC1126E81E5AF13600927D14 /* WebVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVCDataSource.m; sourceTree = "<group>"; };
+		FC5413391E5E91D60061664A /* AudioUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploadVC.h; sourceTree = "<group>"; };
+		FC54133A1E5E91D60061664A /* AudioUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploadVC.m; sourceTree = "<group>"; };
+		FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDownloadVC.h; sourceTree = "<group>"; };
+		FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDownloadVC.m; sourceTree = "<group>"; };
 		FC6086AF1E5BD73D003D4EE9 /* JSONVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONVC.h; sourceTree = "<group>"; };
 		FC6086B01E5BD73D003D4EE9 /* JSONVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONVC.m; sourceTree = "<group>"; };
 		FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWebVC.h; sourceTree = "<group>"; };
@@ -428,6 +434,8 @@
 			children = (
 				FC6086B51E5BD845003D4EE9 /* AudioWebVC.h */,
 				FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */,
+				FC5413381E5E91BC0061664A /* 上传音频 */,
+				FC54133C1E5EBACE0061664A /* 下载音频 */,
 			);
 			path = "音频";
 			sourceTree = "<group>";
@@ -439,6 +447,24 @@
 				FC6086B01E5BD73D003D4EE9 /* JSONVC.m */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		FC5413381E5E91BC0061664A /* 上传音频 */ = {
+			isa = PBXGroup;
+			children = (
+				FC5413391E5E91D60061664A /* AudioUploadVC.h */,
+				FC54133A1E5E91D60061664A /* AudioUploadVC.m */,
+			);
+			path = "上传音频";
+			sourceTree = "<group>";
+		};
+		FC54133C1E5EBACE0061664A /* 下载音频 */ = {
+			isa = PBXGroup;
+			children = (
+				FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */,
+				FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */,
+			);
+			path = "下载音频";
 			sourceTree = "<group>";
 		};
 		FC60EB3C1E5D6AD40062D12F /* 单张图片上传 */ = {
@@ -602,6 +628,7 @@
 				FC1126B71E5A824A00927D14 /* AFURLRequestSerialization.m in Sources */,
 				FC60EAF61E5D2B380062D12F /* ImageDownloadVC.m in Sources */,
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
+				FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
 				FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */,
@@ -610,6 +637,7 @@
 				FC1126BA1E5A824A00927D14 /* AFAutoPurgingImageCache.m in Sources */,
 				FC60EB431E5D6CB10062D12F /* MoreImagesULVC.m in Sources */,
 				FC60EAF91E5D2B560062D12F /* ImageUploadVC.m in Sources */,
+				FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */,
 				FC11268F1E5A81F400927D14 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */,
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
