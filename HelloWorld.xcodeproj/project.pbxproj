@@ -44,6 +44,8 @@
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
 		FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */; };
 		FC3A6BA81E602BAA00FD2891 /* UserTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA71E602BAA00FD2891 /* UserTest1.m */; };
+		FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */; };
+		FC3A6BAE1E60383F00FD2891 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */; };
 		FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133A1E5E91D60061664A /* AudioUploadVC.m */; };
 		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
 		FC5413461E5ED3240061664A /* HWDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5413451E5ED3240061664A /* HWDataVC.m */; };
@@ -151,6 +153,9 @@
 		FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWArchiverVC.m; sourceTree = "<group>"; };
 		FC3A6BA61E602BAA00FD2891 /* UserTest1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTest1.h; sourceTree = "<group>"; };
 		FC3A6BA71E602BAA00FD2891 /* UserTest1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTest1.m; sourceTree = "<group>"; };
+		FC3A6BAA1E6034A300FD2891 /* HWSqliteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSqliteVC.h; sourceTree = "<group>"; };
+		FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSqliteVC.m; sourceTree = "<group>"; };
+		FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		FC5413391E5E91D60061664A /* AudioUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploadVC.h; sourceTree = "<group>"; };
 		FC54133A1E5E91D60061664A /* AudioUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploadVC.m; sourceTree = "<group>"; };
 		FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDownloadVC.h; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3A6BAE1E60383F00FD2891 /* libsqlite3.0.tbd in Frameworks */,
 				FC1126D21E5A969300927D14 /* AVFoundation.framework in Frameworks */,
 				FC1126E21E5AE67000927D14 /* lame.h in Frameworks */,
 				FC1126E31E5AE67000927D14 /* libmp3lame.a in Frameworks */,
@@ -409,6 +415,7 @@
 		FC1126D01E5A969300927D14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */,
 				FC1126E01E5AE67000927D14 /* lame.h */,
 				FC1126E11E5AE67000927D14 /* libmp3lame.a */,
 				FC1126D11E5A969300927D14 /* AVFoundation.framework */,
@@ -473,6 +480,15 @@
 			path = Archiver;
 			sourceTree = "<group>";
 		};
+		FC3A6BA91E60347E00FD2891 /* SQLite3 */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A6BAA1E6034A300FD2891 /* HWSqliteVC.h */,
+				FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */,
+			);
+			path = SQLite3;
+			sourceTree = "<group>";
+		};
 		FC5413381E5E91BC0061664A /* 上传音频 */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +512,7 @@
 			children = (
 				FC5413441E5ED3240061664A /* HWDataVC.h */,
 				FC5413451E5ED3240061664A /* HWDataVC.m */,
+				FC3A6BA91E60347E00FD2891 /* SQLite3 */,
 				FC3A6BA21E60287000FD2891 /* Archiver */,
 				FC54134B1E5EE0B90061664A /* plist */,
 			);
@@ -697,6 +714,7 @@
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
 				FC1126B51E5A824A00927D14 /* AFNetworkReachabilityManager.m in Sources */,
 				FC1126B61E5A824A00927D14 /* AFSecurityPolicy.m in Sources */,
+				FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */,
 				FC1126B41E5A824A00927D14 /* AFHTTPSessionManager.m in Sources */,
 				FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */,
 				FC1126531E5A7D5200927D14 /* main.m in Sources */,

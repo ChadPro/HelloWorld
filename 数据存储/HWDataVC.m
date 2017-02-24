@@ -11,6 +11,7 @@
 
 #import "HWCreatePlistDataVC.h"
 #import "HWArchiverVC.h"
+#import "HWSqliteVC.h"
 
 @interface HWDataVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -71,7 +72,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }else if(row == 2){
         
     }else if(row == 3){
-        
+        HWSqliteVC *vc = [[HWSqliteVC alloc]init];
+        vc.title = [_titles objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
