@@ -10,6 +10,7 @@
 #import "SDAutoLayout.h"
 
 #import "HWCreatePlistDataVC.h"
+#import "HWArchiverVC.h"
 
 @interface HWDataVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -24,7 +25,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"plist",@"Preference偏好设置",@"Core Data",@"SQLite3"];
+    _titles = @[@"plist",@"Archiver归档",@"Core Data",@"SQLite3"];
     [self createUI];
 }
 
@@ -64,7 +65,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
         vc.title = [_titles objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }else if(row == 1){
-        
+        HWArchiverVC *vc = [[HWArchiverVC alloc]init];
+        vc.title = [_titles objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if(row == 2){
         
     }else if(row == 3){
