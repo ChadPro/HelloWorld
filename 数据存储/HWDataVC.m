@@ -12,6 +12,7 @@
 #import "HWCreatePlistDataVC.h"
 #import "HWArchiverVC.h"
 #import "HWSqliteVC.h"
+#import "HWSelectGoodVC.h"
 
 @interface HWDataVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,7 +27,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"plist",@"Archiver归档",@"Core Data",@"SQLite3"];
+    _titles = @[@"plist",@"Archiver归档",@"Core Data",@"SQLite3",@"SQLite3-商品属性选择"];
     [self createUI];
 }
 
@@ -73,6 +74,10 @@ static NSString *cellIdentifier = @"cellIdentifier";
         
     }else if(row == 3){
         HWSqliteVC *vc = [[HWSqliteVC alloc]init];
+        vc.title = [_titles objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 4){
+        HWSelectGoodVC *vc = [[HWSelectGoodVC alloc]init];
         vc.title = [_titles objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }

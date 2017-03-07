@@ -42,10 +42,13 @@
 		FC1126E31E5AE67000927D14 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1126E11E5AE67000927D14 /* libmp3lame.a */; };
 		FC1126E61E5AF10600927D14 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E51E5AF10600927D14 /* WebVC.m */; };
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
+		FC1302411E6CFD050064B6AA /* HWSelectGoodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1302401E6CFD050064B6AA /* HWSelectGoodVC.m */; };
+		FC1302471E6D680A0064B6AA /* HWGoodAttributesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */; };
 		FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */; };
 		FC3A6BA81E602BAA00FD2891 /* UserTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA71E602BAA00FD2891 /* UserTest1.m */; };
 		FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */; };
 		FC3A6BAE1E60383F00FD2891 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */; };
+		FC46D9041E69363C006539C4 /* LJKJGoodClassManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */; };
 		FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133A1E5E91D60061664A /* AudioUploadVC.m */; };
 		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
 		FC5413461E5ED3240061664A /* HWDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5413451E5ED3240061664A /* HWDataVC.m */; };
@@ -149,6 +152,10 @@
 		FC1126E51E5AF10600927D14 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 		FC1126E71E5AF13600927D14 /* WebVCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVCDataSource.h; sourceTree = "<group>"; };
 		FC1126E81E5AF13600927D14 /* WebVCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVCDataSource.m; sourceTree = "<group>"; };
+		FC13023F1E6CFD050064B6AA /* HWSelectGoodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSelectGoodVC.h; sourceTree = "<group>"; };
+		FC1302401E6CFD050064B6AA /* HWSelectGoodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSelectGoodVC.m; sourceTree = "<group>"; };
+		FC1302451E6D680A0064B6AA /* HWGoodAttributesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWGoodAttributesCell.h; sourceTree = "<group>"; };
+		FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWGoodAttributesCell.m; sourceTree = "<group>"; };
 		FC3A6BA31E60288A00FD2891 /* HWArchiverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWArchiverVC.h; sourceTree = "<group>"; };
 		FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWArchiverVC.m; sourceTree = "<group>"; };
 		FC3A6BA61E602BAA00FD2891 /* UserTest1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTest1.h; sourceTree = "<group>"; };
@@ -156,6 +163,8 @@
 		FC3A6BAA1E6034A300FD2891 /* HWSqliteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWSqliteVC.h; sourceTree = "<group>"; };
 		FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSqliteVC.m; sourceTree = "<group>"; };
 		FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		FC46D9021E69363C006539C4 /* LJKJGoodClassManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKJGoodClassManager.h; sourceTree = "<group>"; };
+		FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKJGoodClassManager.m; sourceTree = "<group>"; };
 		FC5413391E5E91D60061664A /* AudioUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploadVC.h; sourceTree = "<group>"; };
 		FC54133A1E5E91D60061664A /* AudioUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploadVC.m; sourceTree = "<group>"; };
 		FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDownloadVC.h; sourceTree = "<group>"; };
@@ -469,6 +478,17 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		FC13023E1E6CF7E90064B6AA /* SQLite-商品属性选择 */ = {
+			isa = PBXGroup;
+			children = (
+				FC13023F1E6CFD050064B6AA /* HWSelectGoodVC.h */,
+				FC1302401E6CFD050064B6AA /* HWSelectGoodVC.m */,
+				FC1302451E6D680A0064B6AA /* HWGoodAttributesCell.h */,
+				FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */,
+			);
+			path = "SQLite-商品属性选择";
+			sourceTree = "<group>";
+		};
 		FC3A6BA21E60287000FD2891 /* Archiver */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +505,8 @@
 			children = (
 				FC3A6BAA1E6034A300FD2891 /* HWSqliteVC.h */,
 				FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */,
+				FC46D9021E69363C006539C4 /* LJKJGoodClassManager.h */,
+				FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */,
 			);
 			path = SQLite3;
 			sourceTree = "<group>";
@@ -512,6 +534,7 @@
 			children = (
 				FC5413441E5ED3240061664A /* HWDataVC.h */,
 				FC5413451E5ED3240061664A /* HWDataVC.m */,
+				FC13023E1E6CF7E90064B6AA /* SQLite-商品属性选择 */,
 				FC3A6BA91E60347E00FD2891 /* SQLite3 */,
 				FC3A6BA21E60287000FD2891 /* Archiver */,
 				FC54134B1E5EE0B90061664A /* plist */,
@@ -711,12 +734,15 @@
 				FC5413461E5ED3240061664A /* HWDataVC.m in Sources */,
 				FC1126C21E5A824A00927D14 /* UIWebView+AFNetworking.m in Sources */,
 				FC1126E61E5AF10600927D14 /* WebVC.m in Sources */,
+				FC1302411E6CFD050064B6AA /* HWSelectGoodVC.m in Sources */,
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
+				FC46D9041E69363C006539C4 /* LJKJGoodClassManager.m in Sources */,
 				FC1126B51E5A824A00927D14 /* AFNetworkReachabilityManager.m in Sources */,
 				FC1126B61E5A824A00927D14 /* AFSecurityPolicy.m in Sources */,
 				FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */,
 				FC1126B41E5A824A00927D14 /* AFHTTPSessionManager.m in Sources */,
 				FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */,
+				FC1302471E6D680A0064B6AA /* HWGoodAttributesCell.m in Sources */,
 				FC1126531E5A7D5200927D14 /* main.m in Sources */,
 				FC1126BC1E5A824A00927D14 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
