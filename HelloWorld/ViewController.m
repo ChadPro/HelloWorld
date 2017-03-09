@@ -15,7 +15,7 @@
 #import "HWLayerLearnVC.h"
 #import "HWRunLoopMainVC.h"
 
-#define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
+
 #define tagBase 170220
 
 @interface ViewController ()

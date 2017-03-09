@@ -49,6 +49,7 @@
 		FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */; };
 		FC3A6BAE1E60383F00FD2891 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */; };
 		FC46D9041E69363C006539C4 /* LJKJGoodClassManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */; };
+		FC4AE31B1E715619000F878F /* HWNotifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4AE31A1E715619000F878F /* HWNotifyVC.m */; };
 		FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133A1E5E91D60061664A /* AudioUploadVC.m */; };
 		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
 		FC5413461E5ED3240061664A /* HWDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5413451E5ED3240061664A /* HWDataVC.m */; };
@@ -171,6 +172,9 @@
 		FC3A6BAD1E60383F00FD2891 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		FC46D9021E69363C006539C4 /* LJKJGoodClassManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKJGoodClassManager.h; sourceTree = "<group>"; };
 		FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKJGoodClassManager.m; sourceTree = "<group>"; };
+		FC4AE3171E714873000F878F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FC4AE3191E715619000F878F /* HWNotifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNotifyVC.h; sourceTree = "<group>"; };
+		FC4AE31A1E715619000F878F /* HWNotifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNotifyVC.m; sourceTree = "<group>"; };
 		FC5413391E5E91D60061664A /* AudioUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploadVC.h; sourceTree = "<group>"; };
 		FC54133A1E5E91D60061664A /* AudioUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploadVC.m; sourceTree = "<group>"; };
 		FC54133D1E5EBAEF0061664A /* AudioDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDownloadVC.h; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 				FC1126551E5A7D5200927D14 /* AppDelegate.m */,
 				FC1126571E5A7D5200927D14 /* ViewController.h */,
 				FC1126581E5A7D5200927D14 /* ViewController.m */,
+				FC4AE3171E714873000F878F /* PrefixHeader.pch */,
 				FC11265A1E5A7D5200927D14 /* Main.storyboard */,
 				FC11265D1E5A7D5200927D14 /* Assets.xcassets */,
 				FC11265F1E5A7D5200927D14 /* LaunchScreen.storyboard */,
@@ -351,6 +356,7 @@
 			children = (
 				FC90EC301E6FB7C300735190 /* HWRunLoopMainVC.h */,
 				FC90EC311E6FB7C300735190 /* HWRunLoopMainVC.m */,
+				FC4AE3181E7155EC000F878F /* OC Notification */,
 				FC90EC2F1E6FB7AF00735190 /* OC object */,
 			);
 			path = RunLoop;
@@ -534,6 +540,15 @@
 				FC46D9031E69363C006539C4 /* LJKJGoodClassManager.m */,
 			);
 			path = SQLite3;
+			sourceTree = "<group>";
+		};
+		FC4AE3181E7155EC000F878F /* OC Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AE3191E715619000F878F /* HWNotifyVC.h */,
+				FC4AE31A1E715619000F878F /* HWNotifyVC.m */,
+			);
+			name = "OC Notification";
 			sourceTree = "<group>";
 		};
 		FC5413381E5E91BC0061664A /* 上传音频 */ = {
@@ -768,6 +783,7 @@
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
 				FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
+				FC4AE31B1E715619000F878F /* HWNotifyVC.m in Sources */,
 				FC90EC321E6FB7C300735190 /* HWRunLoopMainVC.m in Sources */,
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
 				FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */,
@@ -961,6 +977,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QK4DZM8X3G;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/PrefixHeader.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -978,6 +996,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QK4DZM8X3G;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/PrefixHeader.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

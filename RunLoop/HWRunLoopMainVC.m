@@ -9,6 +9,7 @@
 #import "HWRunLoopMainVC.h"
 #import "SDAutoLayout.h"
 #import "HWInheritVC.h"
+#import "HWNotifyVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 
@@ -23,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titles = @[@"OC类继承"];
+    self.titles = @[@"OC类继承",@"通知的使用"];
     [self createUI];
 }
 
@@ -64,6 +65,11 @@
     NSInteger row = indexPath.row;
     if(row == 0){
         HWInheritVC *vc = [[HWInheritVC alloc]init];
+        vc.title = [_titles objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(row == 1){
+        HWNotifyVC *vc = [[HWNotifyVC alloc]init];
         vc.title = [_titles objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }
