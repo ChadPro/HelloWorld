@@ -53,6 +53,7 @@
 		FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54133E1E5EBAEF0061664A /* AudioDownloadVC.m */; };
 		FC5413461E5ED3240061664A /* HWDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5413451E5ED3240061664A /* HWDataVC.m */; };
 		FC54134E1E5EE0B90061664A /* HWCreatePlistDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54134D1E5EE0B90061664A /* HWCreatePlistDataVC.m */; };
+		FC5A65F61E6EA6BC0027B5C4 /* HWLayerLearnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A65F51E6EA6BC0027B5C4 /* HWLayerLearnVC.m */; };
 		FC6086B11E5BD73D003D4EE9 /* JSONVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B01E5BD73D003D4EE9 /* JSONVC.m */; };
 		FC6086B41E5BD7E3003D4EE9 /* ImageWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B31E5BD7E3003D4EE9 /* ImageWebVC.m */; };
 		FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6086B61E5BD845003D4EE9 /* AudioWebVC.m */; };
@@ -62,6 +63,11 @@
 		FC60EAFC1E5D2B7A0062D12F /* ImageCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EAFB1E5D2B7A0062D12F /* ImageCacheVC.m */; };
 		FC60EB401E5D6C9A0062D12F /* OneImageULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EB3F1E5D6C9A0062D12F /* OneImageULVC.m */; };
 		FC60EB431E5D6CB10062D12F /* MoreImagesULVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60EB421E5D6CB10062D12F /* MoreImagesULVC.m */; };
+		FC90EC2E1E6F985500735190 /* HWhttpsLearnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90EC2D1E6F985500735190 /* HWhttpsLearnVC.m */; };
+		FC90EC321E6FB7C300735190 /* HWRunLoopMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90EC311E6FB7C300735190 /* HWRunLoopMainVC.m */; };
+		FC90EC351E6FD12F00735190 /* HWInheritVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90EC341E6FD12F00735190 /* HWInheritVC.m */; };
+		FC90EC381E6FD5EE00735190 /* HWTestInheritOC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90EC371E6FD5EE00735190 /* HWTestInheritOC.m */; };
+		FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC90EC3D1E6FD67A00735190 /* HWTestOC1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +179,8 @@
 		FC5413451E5ED3240061664A /* HWDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWDataVC.m; sourceTree = "<group>"; };
 		FC54134C1E5EE0B90061664A /* HWCreatePlistDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCreatePlistDataVC.h; sourceTree = "<group>"; };
 		FC54134D1E5EE0B90061664A /* HWCreatePlistDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCreatePlistDataVC.m; sourceTree = "<group>"; };
+		FC5A65F41E6EA6BC0027B5C4 /* HWLayerLearnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLayerLearnVC.h; sourceTree = "<group>"; };
+		FC5A65F51E6EA6BC0027B5C4 /* HWLayerLearnVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLayerLearnVC.m; sourceTree = "<group>"; };
 		FC6086AF1E5BD73D003D4EE9 /* JSONVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONVC.h; sourceTree = "<group>"; };
 		FC6086B01E5BD73D003D4EE9 /* JSONVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONVC.m; sourceTree = "<group>"; };
 		FC6086B21E5BD7E3003D4EE9 /* ImageWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWebVC.h; sourceTree = "<group>"; };
@@ -191,6 +199,16 @@
 		FC60EB3F1E5D6C9A0062D12F /* OneImageULVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneImageULVC.m; sourceTree = "<group>"; };
 		FC60EB411E5D6CB10062D12F /* MoreImagesULVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreImagesULVC.h; sourceTree = "<group>"; };
 		FC60EB421E5D6CB10062D12F /* MoreImagesULVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreImagesULVC.m; sourceTree = "<group>"; };
+		FC90EC2C1E6F985500735190 /* HWhttpsLearnVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWhttpsLearnVC.h; sourceTree = "<group>"; };
+		FC90EC2D1E6F985500735190 /* HWhttpsLearnVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWhttpsLearnVC.m; sourceTree = "<group>"; };
+		FC90EC301E6FB7C300735190 /* HWRunLoopMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWRunLoopMainVC.h; sourceTree = "<group>"; };
+		FC90EC311E6FB7C300735190 /* HWRunLoopMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWRunLoopMainVC.m; sourceTree = "<group>"; };
+		FC90EC331E6FD12F00735190 /* HWInheritVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWInheritVC.h; sourceTree = "<group>"; };
+		FC90EC341E6FD12F00735190 /* HWInheritVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWInheritVC.m; sourceTree = "<group>"; };
+		FC90EC361E6FD5EE00735190 /* HWTestInheritOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTestInheritOC.h; sourceTree = "<group>"; };
+		FC90EC371E6FD5EE00735190 /* HWTestInheritOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTestInheritOC.m; sourceTree = "<group>"; };
+		FC90EC3C1E6FD67A00735190 /* HWTestOC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTestOC1.h; sourceTree = "<group>"; };
+		FC90EC3D1E6FD67A00735190 /* HWTestOC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTestOC1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +323,9 @@
 		FC1126851E5A81C400927D14 /* 图像处理 */ = {
 			isa = PBXGroup;
 			children = (
+				FC5A65F41E6EA6BC0027B5C4 /* HWLayerLearnVC.h */,
+				FC5A65F51E6EA6BC0027B5C4 /* HWLayerLearnVC.m */,
+				FC5A65F31E6EA6650027B5C4 /* 动画 */,
 			);
 			path = "图像处理";
 			sourceTree = "<group>";
@@ -316,6 +337,7 @@
 				FC1126E51E5AF10600927D14 /* WebVC.m */,
 				FC1126E71E5AF13600927D14 /* WebVCDataSource.h */,
 				FC1126E81E5AF13600927D14 /* WebVCDataSource.m */,
+				FC90EC2B1E6F983D00735190 /* https */,
 				FC1126ED1E5AF4E200927D14 /* json */,
 				FC1126EA1E5AF4E200927D14 /* 图片 */,
 				FC1126EC1E5AF4E200927D14 /* 音频 */,
@@ -327,6 +349,9 @@
 		FC1126871E5A81C400927D14 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				FC90EC301E6FB7C300735190 /* HWRunLoopMainVC.h */,
+				FC90EC311E6FB7C300735190 /* HWRunLoopMainVC.m */,
+				FC90EC2F1E6FB7AF00735190 /* OC object */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -551,6 +576,13 @@
 			path = plist;
 			sourceTree = "<group>";
 		};
+		FC5A65F31E6EA6650027B5C4 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
 		FC60EB3C1E5D6AD40062D12F /* 单张图片上传 */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +599,28 @@
 				FC60EB421E5D6CB10062D12F /* MoreImagesULVC.m */,
 			);
 			path = "多张图片分组上传";
+			sourceTree = "<group>";
+		};
+		FC90EC2B1E6F983D00735190 /* https */ = {
+			isa = PBXGroup;
+			children = (
+				FC90EC2C1E6F985500735190 /* HWhttpsLearnVC.h */,
+				FC90EC2D1E6F985500735190 /* HWhttpsLearnVC.m */,
+			);
+			path = https;
+			sourceTree = "<group>";
+		};
+		FC90EC2F1E6FB7AF00735190 /* OC object */ = {
+			isa = PBXGroup;
+			children = (
+				FC90EC331E6FD12F00735190 /* HWInheritVC.h */,
+				FC90EC341E6FD12F00735190 /* HWInheritVC.m */,
+				FC90EC361E6FD5EE00735190 /* HWTestInheritOC.h */,
+				FC90EC371E6FD5EE00735190 /* HWTestInheritOC.m */,
+				FC90EC3C1E6FD67A00735190 /* HWTestOC1.h */,
+				FC90EC3D1E6FD67A00735190 /* HWTestOC1.m */,
+			);
+			path = "OC object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,16 +768,21 @@
 				FC1126BF1E5A824A00927D14 /* UIImageView+AFNetworking.m in Sources */,
 				FC54133B1E5E91D60061664A /* AudioUploadVC.m in Sources */,
 				FC1126591E5A7D5200927D14 /* ViewController.m in Sources */,
+				FC90EC321E6FB7C300735190 /* HWRunLoopMainVC.m in Sources */,
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
 				FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */,
+				FC90EC2E1E6F985500735190 /* HWhttpsLearnVC.m in Sources */,
 				FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */,
 				FC1126BB1E5A824A00927D14 /* AFImageDownloader.m in Sources */,
+				FC90EC381E6FD5EE00735190 /* HWTestInheritOC.m in Sources */,
 				FC1126BA1E5A824A00927D14 /* AFAutoPurgingImageCache.m in Sources */,
 				FC60EB431E5D6CB10062D12F /* MoreImagesULVC.m in Sources */,
+				FC90EC351E6FD12F00735190 /* HWInheritVC.m in Sources */,
 				FC60EAF91E5D2B560062D12F /* ImageUploadVC.m in Sources */,
 				FC54133F1E5EBAEF0061664A /* AudioDownloadVC.m in Sources */,
 				FC11268F1E5A81F400927D14 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				FC1126CA1E5A890100927D14 /* iOSCodeVC.m in Sources */,
+				FC5A65F61E6EA6BC0027B5C4 /* HWLayerLearnVC.m in Sources */,
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
 				FC6086BA1E5BD861003D4EE9 /* VideoWebVC.m in Sources */,
 				FC1126BD1E5A824A00927D14 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -749,6 +808,7 @@
 				FC60EB401E5D6C9A0062D12F /* OneImageULVC.m in Sources */,
 				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
 				FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */,
+				FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */,
 				FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */,
 				FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */,
 			);

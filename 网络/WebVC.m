@@ -14,6 +14,7 @@
 #import "ImageWebVC.h"
 #import "AudioWebVC.h"
 #import "VideoWebVC.h"
+#import "HWhttpsLearnVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 
@@ -29,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"json",@"图片",@"音频",@"视频",@"加密文件"];
+    _titles = @[@"json",@"图片",@"音频",@"视频",@"Https"];
     [self createUI];
 }
 
@@ -67,6 +68,10 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(row == 3){
         VideoWebVC *vc = [[VideoWebVC alloc]init];
+        vc.title = [_titles objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 4){
+        HWhttpsLearnVC *vc = [[HWhttpsLearnVC alloc]init];
         vc.title = [_titles objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }
