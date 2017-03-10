@@ -46,14 +46,25 @@
     .heightIs(50)
     .widthIs(100);
     
+    //注册观察者
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifyAction:) name:@"NotifyTest" object:nil];
 }
 
 - (void)btnAction:(UIButton *)btn{
+    //发送通知，并带着一个dic传递信息
+    NSDictionary *dic = @{@"name":@"Chad",@"age":@"27"};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NotifyTest" object:nil userInfo:dic];
     
 }
 
 - (void)notifyAction:(NSNotification *)notification{
-    
+    NSDictionary *dic = notification.userInfo;
+    NSLog(@"name = %@",[dic valueForKey:@"name"]);
+    NSLog(@"age = %@",[dic valueForKey:@"age"]);
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:@"NotifyTest"];
 }
 
 - (void)didReceiveMemoryWarning {
