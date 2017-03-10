@@ -1,28 +1,27 @@
 //
-//  HWLayerLearnVC.m
+//  HWAnimationVC.m
 //  HelloWorld
 //
-//  Created by Ji Ling on 2017/3/7.
+//  Created by Ji Ling on 2017/3/10.
 //  Copyright © 2017年 Ji Ling. All rights reserved.
 //
 
-#import "HWLayerLearnVC.h"
-
 #import "HWAnimationVC.h"
 
-@interface HWLayerLearnVC ()<UITableViewDelegate,UITableViewDataSource>
+#import "HWBasicAnimationVc.h"
+
+@interface HWAnimationVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSArray *titles;
 
 @end
 
-@implementation HWLayerLearnVC
-
+@implementation HWAnimationVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titles = @[@"动画",@"头像截取",@"图片圆角",@"贝塞尔曲线"];
+    self.titles = @[@"BasicAnimation",@"KeyFrameAnimation",@"AnimationGroup",@"Transition"];
     [self createUI];
 }
 
@@ -62,7 +61,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     if(row == 0){
-        HWAnimationVC *vc = [[HWAnimationVC alloc]init];
+        HWBasicAnimationVc *vc = [[HWBasicAnimationVc alloc]init];
         vc.title = [_titles objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }
@@ -72,7 +71,6 @@
     [super didReceiveMemoryWarning];
     
 }
-
 
 
 @end

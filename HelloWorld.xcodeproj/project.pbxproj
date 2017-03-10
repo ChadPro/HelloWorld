@@ -47,6 +47,8 @@
 		FC36DCDA1E724CF800B3A4A2 /* HWvcLifeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCD91E724CF800B3A4A2 /* HWvcLifeVC.m */; };
 		FC36DCDD1E72526700B3A4A2 /* HWvcLifeNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCDC1E72526700B3A4A2 /* HWvcLifeNaviVC.m */; };
 		FC36DCE01E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCDF1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m */; };
+		FC36DCE31E7277E900B3A4A2 /* HWAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCE21E7277E900B3A4A2 /* HWAnimationVC.m */; };
+		FC36DCE71E727BFC00B3A4A2 /* HWBasicAnimationVc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCE61E727BFC00B3A4A2 /* HWBasicAnimationVc.m */; };
 		FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */; };
 		FC3A6BA81E602BAA00FD2891 /* UserTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA71E602BAA00FD2891 /* UserTest1.m */; };
 		FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */; };
@@ -172,6 +174,10 @@
 		FC36DCDC1E72526700B3A4A2 /* HWvcLifeNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWvcLifeNaviVC.m; sourceTree = "<group>"; };
 		FC36DCDE1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWvcLifeNavi2Vc.h; sourceTree = "<group>"; };
 		FC36DCDF1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWvcLifeNavi2Vc.m; sourceTree = "<group>"; };
+		FC36DCE11E7277E900B3A4A2 /* HWAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWAnimationVC.h; sourceTree = "<group>"; };
+		FC36DCE21E7277E900B3A4A2 /* HWAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWAnimationVC.m; sourceTree = "<group>"; };
+		FC36DCE51E727BFC00B3A4A2 /* HWBasicAnimationVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWBasicAnimationVc.h; sourceTree = "<group>"; };
+		FC36DCE61E727BFC00B3A4A2 /* HWBasicAnimationVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWBasicAnimationVc.m; sourceTree = "<group>"; };
 		FC3A6BA31E60288A00FD2891 /* HWArchiverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWArchiverVC.h; sourceTree = "<group>"; };
 		FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWArchiverVC.m; sourceTree = "<group>"; };
 		FC3A6BA61E602BAA00FD2891 /* UserTest1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTest1.h; sourceTree = "<group>"; };
@@ -551,6 +557,15 @@
 			path = "VC生命周期";
 			sourceTree = "<group>";
 		};
+		FC36DCE41E727B8E00B3A4A2 /* BasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FC36DCE51E727BFC00B3A4A2 /* HWBasicAnimationVc.h */,
+				FC36DCE61E727BFC00B3A4A2 /* HWBasicAnimationVc.m */,
+			);
+			path = BasicAnimation;
+			sourceTree = "<group>";
+		};
 		FC3A6BA21E60287000FD2891 /* Archiver */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +640,9 @@
 		FC5A65F31E6EA6650027B5C4 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
+				FC36DCE11E7277E900B3A4A2 /* HWAnimationVC.h */,
+				FC36DCE21E7277E900B3A4A2 /* HWAnimationVC.m */,
+				FC36DCE41E727B8E00B3A4A2 /* BasicAnimation */,
 			);
 			path = "动画";
 			sourceTree = "<group>";
@@ -844,6 +862,7 @@
 				FC1302411E6CFD050064B6AA /* HWSelectGoodVC.m in Sources */,
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
 				FC46D9041E69363C006539C4 /* LJKJGoodClassManager.m in Sources */,
+				FC36DCE71E727BFC00B3A4A2 /* HWBasicAnimationVc.m in Sources */,
 				FC1126B51E5A824A00927D14 /* AFNetworkReachabilityManager.m in Sources */,
 				FC36DCDD1E72526700B3A4A2 /* HWvcLifeNaviVC.m in Sources */,
 				FC1126B61E5A824A00927D14 /* AFSecurityPolicy.m in Sources */,
@@ -856,6 +875,7 @@
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
 				FC60EB401E5D6C9A0062D12F /* OneImageULVC.m in Sources */,
 				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
+				FC36DCE31E7277E900B3A4A2 /* HWAnimationVC.m in Sources */,
 				FC36DCDA1E724CF800B3A4A2 /* HWvcLifeVC.m in Sources */,
 				FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */,
 				FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */,
