@@ -44,6 +44,9 @@
 		FC1126E91E5AF13600927D14 /* WebVCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126E81E5AF13600927D14 /* WebVCDataSource.m */; };
 		FC1302411E6CFD050064B6AA /* HWSelectGoodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1302401E6CFD050064B6AA /* HWSelectGoodVC.m */; };
 		FC1302471E6D680A0064B6AA /* HWGoodAttributesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */; };
+		FC36DCDA1E724CF800B3A4A2 /* HWvcLifeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCD91E724CF800B3A4A2 /* HWvcLifeVC.m */; };
+		FC36DCDD1E72526700B3A4A2 /* HWvcLifeNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCDC1E72526700B3A4A2 /* HWvcLifeNaviVC.m */; };
+		FC36DCE01E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC36DCDF1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m */; };
 		FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */; };
 		FC3A6BA81E602BAA00FD2891 /* UserTest1.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BA71E602BAA00FD2891 /* UserTest1.m */; };
 		FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6BAB1E6034A300FD2891 /* HWSqliteVC.m */; };
@@ -163,6 +166,12 @@
 		FC1302401E6CFD050064B6AA /* HWSelectGoodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWSelectGoodVC.m; sourceTree = "<group>"; };
 		FC1302451E6D680A0064B6AA /* HWGoodAttributesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWGoodAttributesCell.h; sourceTree = "<group>"; };
 		FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWGoodAttributesCell.m; sourceTree = "<group>"; };
+		FC36DCD81E724CF800B3A4A2 /* HWvcLifeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWvcLifeVC.h; sourceTree = "<group>"; };
+		FC36DCD91E724CF800B3A4A2 /* HWvcLifeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWvcLifeVC.m; sourceTree = "<group>"; };
+		FC36DCDB1E72526700B3A4A2 /* HWvcLifeNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWvcLifeNaviVC.h; sourceTree = "<group>"; };
+		FC36DCDC1E72526700B3A4A2 /* HWvcLifeNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWvcLifeNaviVC.m; sourceTree = "<group>"; };
+		FC36DCDE1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWvcLifeNavi2Vc.h; sourceTree = "<group>"; };
+		FC36DCDF1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWvcLifeNavi2Vc.m; sourceTree = "<group>"; };
 		FC3A6BA31E60288A00FD2891 /* HWArchiverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWArchiverVC.h; sourceTree = "<group>"; };
 		FC3A6BA41E60288A00FD2891 /* HWArchiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWArchiverVC.m; sourceTree = "<group>"; };
 		FC3A6BA61E602BAA00FD2891 /* UserTest1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTest1.h; sourceTree = "<group>"; };
@@ -369,6 +378,8 @@
 				FC1126C91E5A890100927D14 /* iOSCodeVC.m */,
 				FC1126CB1E5A8DBF00927D14 /* iOSCodeVCDataSource.h */,
 				FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */,
+				FC36DCD71E724CD100B3A4A2 /* VC生命周期 */,
+				FC36DCD61E724CD100B3A4A2 /* VC生命周期+导航器 */,
 				FC1126C41E5A888500927D14 /* 录音播音 */,
 			);
 			path = UIKit;
@@ -518,6 +529,26 @@
 				FC1302461E6D680A0064B6AA /* HWGoodAttributesCell.m */,
 			);
 			path = "SQLite-商品属性选择";
+			sourceTree = "<group>";
+		};
+		FC36DCD61E724CD100B3A4A2 /* VC生命周期+导航器 */ = {
+			isa = PBXGroup;
+			children = (
+				FC36DCDB1E72526700B3A4A2 /* HWvcLifeNaviVC.h */,
+				FC36DCDC1E72526700B3A4A2 /* HWvcLifeNaviVC.m */,
+				FC36DCDE1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.h */,
+				FC36DCDF1E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m */,
+			);
+			path = "VC生命周期+导航器";
+			sourceTree = "<group>";
+		};
+		FC36DCD71E724CD100B3A4A2 /* VC生命周期 */ = {
+			isa = PBXGroup;
+			children = (
+				FC36DCD81E724CF800B3A4A2 /* HWvcLifeVC.h */,
+				FC36DCD91E724CF800B3A4A2 /* HWvcLifeVC.m */,
+			);
+			path = "VC生命周期";
 			sourceTree = "<group>";
 		};
 		FC3A6BA21E60287000FD2891 /* Archiver */ = {
@@ -788,6 +819,7 @@
 				FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */,
 				FC1126C01E5A824A00927D14 /* UIProgressView+AFNetworking.m in Sources */,
 				FC90EC2E1E6F985500735190 /* HWhttpsLearnVC.m in Sources */,
+				FC36DCE01E7253EB00B3A4A2 /* HWvcLifeNavi2Vc.m in Sources */,
 				FC1126C71E5A88E200927D14 /* MP3_playVC.m in Sources */,
 				FC1126BB1E5A824A00927D14 /* AFImageDownloader.m in Sources */,
 				FC90EC381E6FD5EE00735190 /* HWTestInheritOC.m in Sources */,
@@ -813,6 +845,7 @@
 				FC1126B81E5A824A00927D14 /* AFURLResponseSerialization.m in Sources */,
 				FC46D9041E69363C006539C4 /* LJKJGoodClassManager.m in Sources */,
 				FC1126B51E5A824A00927D14 /* AFNetworkReachabilityManager.m in Sources */,
+				FC36DCDD1E72526700B3A4A2 /* HWvcLifeNaviVC.m in Sources */,
 				FC1126B61E5A824A00927D14 /* AFSecurityPolicy.m in Sources */,
 				FC3A6BAC1E6034A300FD2891 /* HWSqliteVC.m in Sources */,
 				FC1126B41E5A824A00927D14 /* AFHTTPSessionManager.m in Sources */,
@@ -823,6 +856,7 @@
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
 				FC60EB401E5D6C9A0062D12F /* OneImageULVC.m in Sources */,
 				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
+				FC36DCDA1E724CF800B3A4A2 /* HWvcLifeVC.m in Sources */,
 				FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */,
 				FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */,
 				FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */,

@@ -12,6 +12,8 @@
 
 #import "MP3_playVC.h"
 #import "AVAudioRecorderVC.h"
+#import "HWvcLifeVC.h"
+#import "HWvcLifeNaviVC.h"
 
 #define UIColorFromHex(s,alp)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:alp]
 
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titleArray = @[@"播放音频",@"录制音频"];
+    _titleArray = @[@"播放音频",@"录制音频",@"VC生命周期",@"VC生命周期+导航"];
     [self createUI];
 }
 
@@ -57,6 +59,14 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(row == 1){
         AVAudioRecorderVC *vc = [[AVAudioRecorderVC alloc]init];
+        vc.title = [_titleArray objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 2){
+        HWvcLifeVC *vc = [[HWvcLifeVC alloc]init];
+        vc.title = [_titleArray objectAtIndex:row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 3){
+        HWvcLifeNaviVC *vc = [[HWvcLifeNaviVC alloc]init];
         vc.title = [_titleArray objectAtIndex:row];
         [self.navigationController pushViewController:vc animated:YES];
     }
