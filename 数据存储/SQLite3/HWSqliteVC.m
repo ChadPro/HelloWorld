@@ -32,6 +32,7 @@ static int callback(void *notUsed, int argc,char **argv,char **colName){
     [super viewDidLoad];
     self.view.backgroundColor = UIColorFromHex(0x009966, 1.0);
 
+
 //    LJKJGoodClassManager *manager = [LJKJGoodClassManager shareManager];
 //    
 //    NSDictionary *dic = @{@"name":@"iPhone5s-black",@"type":@"4",@"color":@"black",@"num":@"2"};
@@ -46,6 +47,8 @@ static int callback(void *notUsed, int argc,char **argv,char **colName){
 //    NSArray *array = [manager queryDataWith:dic];
 //    NSLog(@"goods = %@",array);
     
+
+
     
 //    NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES).firstObject;
 //    //NSLog(@"documentsPath = %@",documentsPath);

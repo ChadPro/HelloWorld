@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321900781ED04790002A3D13 /* BtnTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321900771ED04790002A3D13 /* BtnTestViewController.m */; };
+		324C855C1ED1544A004974ED /* SlideControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C855B1ED1544A004974ED /* SlideControlViewController.m */; };
+		324C855F1ED15510004974ED /* SlideControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C855E1ED15510004974ED /* SlideControlView.m */; };
 		FC1126531E5A7D5200927D14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126521E5A7D5200927D14 /* main.m */; };
 		FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126551E5A7D5200927D14 /* AppDelegate.m */; };
 		FC1126591E5A7D5200927D14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126581E5A7D5200927D14 /* ViewController.m */; };
@@ -94,6 +97,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321900761ED04790002A3D13 /* BtnTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnTestViewController.h; sourceTree = "<group>"; };
+		321900771ED04790002A3D13 /* BtnTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnTestViewController.m; sourceTree = "<group>"; };
+		324C855A1ED1544A004974ED /* SlideControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideControlViewController.h; sourceTree = "<group>"; };
+		324C855B1ED1544A004974ED /* SlideControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideControlViewController.m; sourceTree = "<group>"; };
+		324C855D1ED15510004974ED /* SlideControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideControlView.h; sourceTree = "<group>"; };
+		324C855E1ED15510004974ED /* SlideControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideControlView.m; sourceTree = "<group>"; };
 		FC11264E1E5A7D5200927D14 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1126521E5A7D5200927D14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC1126541E5A7D5200927D14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -259,6 +268,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321900751ED0475A002A3D13 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				321900761ED04790002A3D13 /* BtnTestViewController.h */,
+				321900771ED04790002A3D13 /* BtnTestViewController.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		324C85591ED15434004974ED /* UISlideControl */ = {
+			isa = PBXGroup;
+			children = (
+				324C855A1ED1544A004974ED /* SlideControlViewController.h */,
+				324C855B1ED1544A004974ED /* SlideControlViewController.m */,
+				324C855D1ED15510004974ED /* SlideControlView.h */,
+				324C855E1ED15510004974ED /* SlideControlView.m */,
+			);
+			path = UISlideControl;
+			sourceTree = "<group>";
+		};
 		FC1126451E5A7D5100927D14 = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +413,8 @@
 				FC1126C91E5A890100927D14 /* iOSCodeVC.m */,
 				FC1126CB1E5A8DBF00927D14 /* iOSCodeVCDataSource.h */,
 				FC1126CC1E5A8DBF00927D14 /* iOSCodeVCDataSource.m */,
+				324C85591ED15434004974ED /* UISlideControl */,
+				321900751ED0475A002A3D13 /* UIButton */,
 				FC36DCD71E724CD100B3A4A2 /* VC生命周期 */,
 				FC36DCD61E724CD100B3A4A2 /* VC生命周期+导航器 */,
 				FC1126C41E5A888500927D14 /* 录音播音 */,
@@ -851,6 +882,7 @@
 				FC5A65F61E6EA6BC0027B5C4 /* HWLayerLearnVC.m in Sources */,
 				FC1126BE1E5A824A00927D14 /* UIButton+AFNetworking.m in Sources */,
 				FC6086BA1E5BD861003D4EE9 /* VideoWebVC.m in Sources */,
+				321900781ED04790002A3D13 /* BtnTestViewController.m in Sources */,
 				FC1126BD1E5A824A00927D14 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FC3A6BA81E602BAA00FD2891 /* UserTest1.m in Sources */,
 				FC54134E1E5EE0B90061664A /* HWCreatePlistDataVC.m in Sources */,
@@ -873,6 +905,7 @@
 				FC1126531E5A7D5200927D14 /* main.m in Sources */,
 				FC1126BC1E5A824A00927D14 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FC1126901E5A81F400927D14 /* UIView+SDAutoLayout.m in Sources */,
+				324C855C1ED1544A004974ED /* SlideControlViewController.m in Sources */,
 				FC60EB401E5D6C9A0062D12F /* OneImageULVC.m in Sources */,
 				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
 				FC36DCE31E7277E900B3A4A2 /* HWAnimationVC.m in Sources */,
@@ -880,6 +913,7 @@
 				FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */,
 				FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */,
 				FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */,
+				324C855F1ED15510004974ED /* SlideControlView.m in Sources */,
 				FC1126CD1E5A8DBF00927D14 /* iOSCodeVCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1034,6 +1068,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/PrefixHeader.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1053,6 +1088,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/PrefixHeader.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

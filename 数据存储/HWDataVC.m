@@ -27,7 +27,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     _titles = @[@"plist",@"Archiver归档",@"Core Data",@"SQLite3",@"SQLite3-商品属性选择"];
+
     [self createUI];
 }
 
