@@ -10,7 +10,7 @@
 
 @protocol SlideControlDelegate <NSObject>
 
-
+- (void)slideControlFloatBack:(CGFloat)slideNum controlType:(NSInteger)type;
 
 @end
 

@@ -55,7 +55,6 @@
         CGFloat yy = point.y;
         
         CGFloat absY = fabs(yy);
-        NSLog(@"absY = %f",absY);
         CGFloat sqV_y = 0;
         
         if(absY>(self.frame.size.height/2 - self.frame.size.width/2)){
@@ -70,6 +69,15 @@
         
         if((sqV_y>0)&&(sqV_y<(self.frame.size.height-self.frame.size.width))){
             [_squareView setFrame:CGRectMake(_squareView.frame.origin.x, sqV_y, _squareView.frame.size.width, _squareView.frame.size.height)];
+        }
+        
+        
+        if(yy<0){
+            CGFloat num = self.frame.size.height/2 - self.frame.size.width/2 - _squareView.frame.origin.y;
+            [self.controlDelegate slideControlFloatBack:num controlType:1];
+        }else{
+            CGFloat num = _squareView.frame.origin.y - (self.frame.size.height/2 - self.frame.size.width/2);
+            [self.controlDelegate slideControlFloatBack:num controlType:2];
         }
     }
 }
