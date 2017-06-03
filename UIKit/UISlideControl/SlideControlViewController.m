@@ -32,7 +32,7 @@
     CGFloat vWidth = 50;
     CGFloat vX = ScreenWidth/2-vWidth/2;
     CGFloat vY = ScreenHeight/2-vHeight/2;
-    SlideControlView *cmdView = [[SlideControlView alloc]initWithFrame:CGRectMake(vX, vY, vWidth, vHeight)];
+    SlideControlView *cmdView = [[SlideControlView alloc] initWithFrame:CGRectMake(vX, vY, vWidth, vHeight)];
     cmdView.controlDelegate = self;
     cmdView.layer.cornerRadius = 5.0;
     cmdView.backgroundColor = [UIColor blueColor];

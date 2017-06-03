@@ -10,6 +10,7 @@
 		321900781ED04790002A3D13 /* BtnTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321900771ED04790002A3D13 /* BtnTestViewController.m */; };
 		324C855C1ED1544A004974ED /* SlideControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C855B1ED1544A004974ED /* SlideControlViewController.m */; };
 		324C855F1ED15510004974ED /* SlideControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C855E1ED15510004974ED /* SlideControlView.m */; };
+		32F46E291EE2A5F000EA95EB /* QSTCSlideCtlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F46E281EE2A5F000EA95EB /* QSTCSlideCtlView.m */; };
 		FC1126531E5A7D5200927D14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126521E5A7D5200927D14 /* main.m */; };
 		FC1126561E5A7D5200927D14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126551E5A7D5200927D14 /* AppDelegate.m */; };
 		FC1126591E5A7D5200927D14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1126581E5A7D5200927D14 /* ViewController.m */; };
@@ -103,6 +104,8 @@
 		324C855B1ED1544A004974ED /* SlideControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideControlViewController.m; sourceTree = "<group>"; };
 		324C855D1ED15510004974ED /* SlideControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideControlView.h; sourceTree = "<group>"; };
 		324C855E1ED15510004974ED /* SlideControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideControlView.m; sourceTree = "<group>"; };
+		32F46E271EE2A5F000EA95EB /* QSTCSlideCtlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTCSlideCtlView.h; sourceTree = "<group>"; };
+		32F46E281EE2A5F000EA95EB /* QSTCSlideCtlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTCSlideCtlView.m; sourceTree = "<group>"; };
 		FC11264E1E5A7D5200927D14 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1126521E5A7D5200927D14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC1126541E5A7D5200927D14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				324C855B1ED1544A004974ED /* SlideControlViewController.m */,
 				324C855D1ED15510004974ED /* SlideControlView.h */,
 				324C855E1ED15510004974ED /* SlideControlView.m */,
+				32F46E271EE2A5F000EA95EB /* QSTCSlideCtlView.h */,
+				32F46E281EE2A5F000EA95EB /* QSTCSlideCtlView.m */,
 			);
 			path = UISlideControl;
 			sourceTree = "<group>";
@@ -910,6 +915,7 @@
 				FC1126D51E5A9F3500927D14 /* AVAudioRecorderVC.m in Sources */,
 				FC36DCE31E7277E900B3A4A2 /* HWAnimationVC.m in Sources */,
 				FC36DCDA1E724CF800B3A4A2 /* HWvcLifeVC.m in Sources */,
+				32F46E291EE2A5F000EA95EB /* QSTCSlideCtlView.m in Sources */,
 				FC3A6BA51E60288A00FD2891 /* HWArchiverVC.m in Sources */,
 				FC90EC3E1E6FD67A00735190 /* HWTestOC1.m in Sources */,
 				FC6086B71E5BD845003D4EE9 /* AudioWebVC.m in Sources */,
