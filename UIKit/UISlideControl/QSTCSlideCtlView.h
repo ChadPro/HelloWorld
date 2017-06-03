@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SlideBarCtlDelegate <NSObject>
+
+- (void)slideControlFloatBack:(CGFloat)slideNum controlType:(NSInteger)type;
+
+@end
+
 @interface QSTCSlideCtlView : UIImageView
+
+@property(nonatomic,weak)id<SlideBarCtlDelegate> ctlDelegate;
 
 @end

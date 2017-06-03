@@ -8,13 +8,14 @@
 
 #import "SlideControlViewController.h"
 #import "SlideControlView.h"
+#import "QSTCSlideCtlView.h"
 
 #import "SDAutoLayout.h"
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface SlideControlViewController ()<SlideControlDelegate>
+@interface SlideControlViewController ()<SlideBarCtlDelegate>
 
 @end
 
@@ -28,19 +29,29 @@
 - (void)createUI{
     self.view.backgroundColor = [UIColor whiteColor];
     
-    CGFloat vHeight = 400;
-    CGFloat vWidth = 50;
-    CGFloat vX = ScreenWidth/2-vWidth/2;
-    CGFloat vY = ScreenHeight/2-vHeight/2;
-    SlideControlView *cmdView = [[SlideControlView alloc] initWithFrame:CGRectMake(vX, vY, vWidth, vHeight)];
-    cmdView.controlDelegate = self;
-    cmdView.layer.cornerRadius = 5.0;
-    cmdView.backgroundColor = [UIColor blueColor];
+//    CGFloat vHeight = 400;
+//    CGFloat vWidth = 50;
+//    CGFloat vX = ScreenWidth/2-vWidth/2;
+//    CGFloat vY = ScreenHeight/2-vHeight/2;
+//    SlideControlView *cmdView = [[SlideControlView alloc] initWithFrame:CGRectMake(vX, vY, vWidth, vHeight)];
+//    cmdView.controlDelegate = self;
+//    cmdView.layer.cornerRadius = 5.0;
+//    cmdView.backgroundColor = [UIColor blueColor];
+//    [self.view addSubview:cmdView];
+    
+    CGFloat vHeight = 200;
+    CGFloat vWidth = 200;
+    QSTCSlideCtlView *cmdView = [[QSTCSlideCtlView alloc] initWithFrame:CGRectMake(50, 114, vWidth, vHeight)];
+    cmdView.ctlDelegate = self;
     [self.view addSubview:cmdView];
 }
 
 - (void)slideControlFloatBack:(CGFloat)slideNum controlType:(NSInteger)type{
-    NSLog(@"num = %f",slideNum);
+    if(type == 0){
+        NSLog(@"x = %f",slideNum);
+    }else if(type == 1){
+        NSLog(@"y = %f",slideNum);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
